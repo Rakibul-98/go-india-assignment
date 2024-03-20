@@ -17,7 +17,7 @@ export default function DiscussionCard({ post }) {
 
   return (
     <div className="mb-8 p-2 shadow-md shadow-gray-400 border-r-2 border-t">
-      <div className="grid grid-cols-6 text-sm">
+      <div className="grid grid-cols-6 md:text-sm text-xs">
         <div className="flex justify-center">
           <p className="text-3xl bg-slate-400 rounded-full h-fit p-1">
             <FcBusinessman />
@@ -33,7 +33,7 @@ export default function DiscussionCard({ post }) {
           <div>
             <p className="my-2 leading-5">{text}</p>
           </div>
-          <div className="flex justify-between text-xs">
+          <div className="flex justify-between md:text-xs text-[10px]">
             {
                 icons.map((icon) => (
                   <div key={icon.id} className="flex items-center gap-1">
