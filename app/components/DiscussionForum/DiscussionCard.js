@@ -4,19 +4,18 @@ import { IoEyeOutline } from "react-icons/io5";
 import { BiComment } from "react-icons/bi";
 import { MdOutlineShare } from "react-icons/md";
 
-
 export default function DiscussionCard({ post }) {
   const { name, text } = post;
 
-  const icons =[
-    {id:1, img:<FaRegHeart/>, text:"2K"},
-    {id:2, img:<IoEyeOutline/>, text:"2K"},
-    {id:3, img:<BiComment/>, text:"2K Comments"},
-    {id:4, img:<MdOutlineShare/>, text:"Share"}
-  ]
+  const icons = [
+    { id: 1, img: <FaRegHeart />, text: "2K" },
+    { id: 2, img: <IoEyeOutline />, text: "2K" },
+    { id: 3, img: <BiComment />, text: "2K Comments" },
+    { id: 4, img: <MdOutlineShare />, text: "Share" },
+  ];
 
   return (
-    <div className="mb-8 p-2 shadow-md shadow-gray-400 border-r-2 border-t">
+    <div className="mb-8 p-2 shadow-md shadow-gray-400 border-r-2 border-t hover:shadow-xl">
       <div className="grid grid-cols-6 md:text-sm text-xs">
         <div className="flex justify-center">
           <p className="text-3xl bg-slate-400 rounded-full h-fit p-1">
@@ -34,15 +33,12 @@ export default function DiscussionCard({ post }) {
             <p className="my-2 leading-5">{text}</p>
           </div>
           <div className="flex justify-between md:text-xs text-[10px]">
-            {
-                icons.map((icon) => (
-                  <div key={icon.id} className="flex items-center gap-1">
-                    {icon.img}
-                    <p>{icon.text}</p>
-                  </div>
-                ))
-
-            }
+            {icons.map((icon) => (
+              <div key={icon.id} className="flex items-center gap-1">
+                {icon.img}
+                <p>{icon.text}</p>
+              </div>
+            ))}
           </div>
         </div>
         <div>

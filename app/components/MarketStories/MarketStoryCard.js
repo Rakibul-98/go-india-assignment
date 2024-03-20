@@ -4,7 +4,7 @@ export default function MarketStoryCard({ story }) {
   const { title, url, text } = story;
 
   return (
-    <div className="mb-10 border">
+    <div className="mb-10 border hover:shadow-lg">
       <Image
         className="h-40 w-full"
         src={url}
