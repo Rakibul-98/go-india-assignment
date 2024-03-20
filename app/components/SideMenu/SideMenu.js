@@ -5,7 +5,7 @@ import { IoMdArrowDropdown } from "react-icons/io";
 
 export default function SideMenu() {
   return (
-    <div className="text-sm text-white">
+    <div className="text-sm text-white h-screen bg-blue-900">
       <div className="flex justify-between items-center text-2xl p-3">
         <div className="flex items-center">
           <p className=" p-1">
@@ -20,7 +20,7 @@ export default function SideMenu() {
         </p>
       </div>
       <hr />
-      <div className="py-5 leading-8">
+      <div className="py-5 leading-10">
         <ul>
           <li className="px-3 flex items-center justify-between bg-sky-950">
             <div className="flex items-center">

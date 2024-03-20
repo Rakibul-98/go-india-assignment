@@ -1,51 +1,45 @@
+"use client";
+
+import { MdArrowRight } from "react-icons/md";
 import DiscussionForum from "../DiscussionForum/DiscussionForum";
 import MarketStories from "../MarketStories/MarketStories";
-import { MdArrowRight } from "react-icons/md";
 import SideMenu from "../SideMenu/SideMenu";
+import { useState } from "react";
 
 export default function Main() {
+  const [hidden, setHidden] = useState(false);
+
+  const handleMenuToggle = () => {
+    console.log("menu toggle clicked");
+    setHidden(!hidden);
+  };
+
   return (
-    <div className="">
-      <div className="grid grid-cols-12">
-        <div className="col-span-3 relative h-screen bg-blue-900">
+    <div className="flex">
+      <div className={`w-1/5 ${hidden ? "-ml-[200px]" : "ml-0"}`}>
+        <div className="sticky top-0">
           <SideMenu />
-          <aside className="flex items-center absolute left-[250px] top-1/2 bg-blue-900 h-20 w-3">
-            <button className="text-3xl text-white -ml-[9px] w-fit">
+          <aside className="flex items-center absolute -right-3 top-1/2 bg-blue-900 h-20 w-3">
+            <button
+              onClick={handleMenuToggle}
+              className="text-3xl text-white -ml-[9px] w-fit"
+            >
               <MdArrowRight />
             </button>
           </aside>
         </div>
-        <div className="col-span-9 m-2">
-          <div className="grid grid-cols-12 gap-10">
-            <div className="col-span-8">
-              <DiscussionForum />
-            </div>
-            <div className="col-span-4">
-              <MarketStories />
-            </div>
+      </div>
+
+      <div className={`m-2 ${hidden ? "w-[98%] mx-auto" : "w-4/5"}`}>
+        <div className="grid grid-cols-12 gap-10">
+          <div className="col-span-8">
+            <DiscussionForum />
+          </div>
+          <div className="col-span-4">
+            <MarketStories />
           </div>
         </div>
       </div>
     </div>
-    // <div className="m-2 relative">
-
-    //   <div className="grid grid-cols-12 gap-10">
-    //     {/* <div className="col-span-8">
-    //       <SideMenu />
-    //     </div> */}
-    //     <div className="col-span-8">
-    //       <DiscussionForum />
-    //     </div>
-    //     <div className="col-span-4">
-    //       <MarketStories />
-    //     </div>
-    //   </div>
-
-    //   <aside className="flex items-center fixed left-0 top-1/2 bg-blue-900 h-20 w-3">
-    //     <button className="text-3xl text-white -ml-[9px] w-fit">
-    //       <MdArrowRight />
-    //     </button>
-    //   </aside>
-    // </div>
   );
 }
