@@ -1,11 +1,9 @@
-import DiscussionForum from "./components/DiscussionForum/DiscussionForum";
-import MarketStories from "./components/MarketStories/MarketStories";
+import Main from "./components/Main/Main";
 
 export default function Home() {
   return (
     <>
-      <DiscussionForum/>
-      <MarketStories/>
+      <Main/>
     </>
   );
 }

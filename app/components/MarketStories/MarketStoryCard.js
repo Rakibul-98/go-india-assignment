@@ -1,14 +1,17 @@
-import mImage from '../../../public/react.png';
 import Image from 'next/image';
+// import imageUrl from 'https://ibb.co/7rCsCF9';
 
-export default function MarketStoryCard() {
+export default function MarketStoryCard({story}) {
+
+  const {title, url,text} = story;
+
   return (
     <div>
         <div className='border'>
-            <Image src={mImage} width={300} alt='bg'></Image>
+            <Image className='w-full' src={url} alt="road" width={1000} height={1000}/>
             <div className='px-5 py-2'>
-                <h3>Title</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At in cum dolor enim ex error iste porro nisi maxime accusamus.</p>
+                <h3>{title}</h3>
+                <p>{text}</p>
             </div>
         </div>
     </div>
