@@ -49,7 +49,7 @@ Install go-india-assignment with npm
 
 ```bash
   npm install go-india-assignment
-  cd my-project
+  cd go-india-assignment
 ```
     
 ## Run Locally
