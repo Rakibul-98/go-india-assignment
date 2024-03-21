@@ -5,7 +5,9 @@ import { IoMdArrowDropdown } from "react-icons/io";
 
 export default function SideMenu() {
   return (
+    // side menu
     <div className="text-sm text-white h-screen bg-blue-900">
+      {/* menu header */}
       <div className="flex justify-between items-center text-2xl p-3">
         <div className="flex items-center">
           <p className=" p-1">
@@ -19,8 +21,9 @@ export default function SideMenu() {
           <BiSolidBell />
         </p>
       </div>
-      <hr />
+      <hr /> {/* horizontal line under the header */}
       <div className="py-5 leading-10">
+        {/* link list */}
         <ul>
           <li className="px-3 flex items-center justify-between bg-sky-950">
             <div className="flex items-center">
@@ -39,6 +42,7 @@ export default function SideMenu() {
             </span>
             Market Stories
           </li>
+          {/* sub list */}
           <ul className="ml-9">
             <li>Sentiment</li>
             <li>Market</li>
